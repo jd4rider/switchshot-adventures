@@ -1,0 +1,27 @@
+{
+  "id": "switchshot-adventures",
+  "title": "Switchshot Adventures",
+  "version": "1.0.0",
+  "developer": "Little Joy Arcade",
+  "description": "Tap to shoot, climb the machine towers and restore the Grand Switchworks.",
+  "orientation": "portrait",
+  "width": 720,
+  "height": 1280,
+  "entry": "./",
+  "icon": "./favicon.svg",
+  "controls": {
+    "keyboard": [
+      "A/D or arrows to move",
+      "Space/Up to jump",
+      "Click to shoot",
+      "1-4 to switch blaster",
+      "Esc pause, R restart"
+    ],
+    "touch": "Drag the lower-left pad to move, flick up to jump, tap anywhere to shoot"
+  },
+  "sdk": {
+    "client": "./arcade-client.js",
+    "gameId": "switchshot-adventures",
+    "saveKey": "switchshot-adventures-save-v1"
+  }
+}

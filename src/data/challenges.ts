@@ -1,0 +1,66 @@
+import type { ChallengeDefinition } from '../types'
+
+export const CHALLENGES: ChallengeDefinition[] = [
+  {
+    id: 'steady-hands',
+    name: 'Steady Hands',
+    description: 'A sparkle-meadow room with a strict shot budget.',
+    objective: 'Reach the portal in six shots.',
+    worldIndex: 0,
+    levelNumber: 9,
+    limitShots: 6,
+    scoreStar2: 2500,
+  },
+  {
+    id: 'mirror-run',
+    name: 'Mirror Run',
+    description: 'Crystal Caverns, two mirrors and no margin for error.',
+    objective: 'Clear the room in under 45 seconds.',
+    worldIndex: 2,
+    levelNumber: 17,
+    limitMs: 45_000,
+    scoreStar2: 2500,
+  },
+  {
+    id: 'no-scratch',
+    name: 'No Scratch',
+    description: 'The clockwork foundry is watching.',
+    objective: 'Finish without taking a single hit.',
+    worldIndex: 1,
+    levelNumber: 23,
+    noDamage: true,
+    scoreStar2: 2500,
+  },
+  {
+    id: 'voltage-vex',
+    name: 'Voltage Vex',
+    description: 'Batteries, gates and a very short clock.',
+    objective: 'Clear the circuit room in 60 seconds.',
+    worldIndex: 3,
+    levelNumber: 31,
+    limitMs: 60_000,
+    scoreStar2: 2500,
+  },
+  {
+    id: 'garden-gambit',
+    name: 'Garden Gambit',
+    description: 'Only grown platforms will carry you home.',
+    objective: 'Finish using no more than eight shots.',
+    worldIndex: 4,
+    levelNumber: 12,
+    limitShots: 8,
+    scoreStar2: 2500,
+  },
+  {
+    id: 'gravity-grind',
+    name: 'Gravity Grind',
+    description: 'One crate, one plate, one very tall room.',
+    objective: 'Clear the workshop without damage.',
+    worldIndex: 5,
+    levelNumber: 26,
+    noDamage: true,
+    scoreStar2: 2500,
+  },
+]
+
+export const CHALLENGE_BY_ID = new Map(CHALLENGES.map((challenge) => [challenge.id, challenge]))

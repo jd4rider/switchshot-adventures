@@ -1,0 +1,13 @@
+{
+  "name": "Switchshot Adventures",
+  "short_name": "Switchshot",
+  "description": "Every shot opens a new adventure.",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#100b1f",
+  "theme_color": "#171032",
+  "icons": [
+    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

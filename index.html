@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Switchshot Adventures — tap to shoot, climb the machine towers and restore the Grand Switchworks in this portrait puzzle platformer."
+    />
+    <meta name="theme-color" content="#171032" />
+    <meta property="og:title" content="Switchshot Adventures" />
+    <meta property="og:description" content="Every shot opens a new adventure." />
+    <meta property="og:type" content="website" />
+    <title>Switchshot Adventures — Little Joy Arcade</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(111, 242, 200, 0.12), transparent 40%),
+          radial-gradient(circle at 15% 85%, rgba(89, 214, 255, 0.12), transparent 36%),
+          #08060f;
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
+        font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+      }
+      #game {
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+      }
+      #game canvas {
+        display: block;
+        max-width: none;
+        max-height: none;
+        touch-action: none;
+        box-shadow: 0 0 90px rgba(111, 242, 200, 0.08);
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+      #boot-fail {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: none;
+        place-items: center;
+        padding: 32px;
+        box-sizing: border-box;
+        text-align: center;
+        background: #100b1f;
+        color: #fff6e2;
+      }
+      #boot-fail.visible {
+        display: grid;
+      }
+      #boot-fail strong {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #6ff2c8;
+      }
+      #boot-fail p {
+        max-width: 340px;
+        line-height: 1.6;
+        opacity: 0.75;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="game" aria-label="Switchshot Adventures game canvas" role="application"></main>
+    <p id="game-status" class="sr-only" aria-live="polite"></p>
+    <div id="boot-fail" role="alert">
+      <div>
+        <strong>Pip could not power up the Switchshot.</strong>
+        <p>This browser needs WebGL or Canvas, JavaScript, and a moment to warm the machinery. Reload to try again.</p>
+      </div>
+    </div>
+    <noscript>Switchshot Adventures needs JavaScript enabled.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="./arcade-client.js" data-game-id="switchshot-adventures"></script>
+  </body>
+</html>
