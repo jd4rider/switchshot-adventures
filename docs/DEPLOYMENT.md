@@ -27,9 +27,10 @@ Expected URL:
 https://jd4rider.github.io/switchshot-adventures/
 ```
 
-This workspace is not a git repository, so the push and the Pages enablement are the
-one deployment step that cannot be performed from here. Everything the workflow
-needs is committed in place.
+The repository live at `github.com/jd4rider/switchshot-adventures` was published from
+this workspace: the tree was initialised on `main`, pushed, and Pages was enabled with
+`build_type=workflow`. The first run of this workflow deployed successfully, so the
+URL above is the live build and every push to `main` republishes it.
 
 The drop-in client is already configured with the public Supabase anon key that the
 SDK ships (`packages/sdk/desktop/arcade-client.js`). That key is safe in a browser:
